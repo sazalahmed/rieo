@@ -572,6 +572,18 @@ button {
     line-height: 55px;
     text-transform: uppercase;
     position: relative;
+    padding-bottom: 18px;
+}
+
+.video_item .text h3::after {
+    position: absolute;
+    content: "";
+    width: 65px;
+    height: 6px;
+    background: var(--colorBlack);
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
 }
 
 .video_item .text h6 {
@@ -586,7 +598,6 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
     line-height: 76px;
@@ -595,6 +606,284 @@ button {
     border-radius: 50%;
     color: var(--colorWhite);
     font-size: 30px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+/* video end */
+
+
+/* team start */
+.team {}
+
+.team_heading {
+    padding-right: 60px;
+}
+
+.team_heading .icon {
+    width: 85px;
+    height: 85px;
+    margin-left: auto;
+    margin-bottom: 27px;
+}
+
+.team_heading h2,
+.team_heading h2 span {
+    color: var(--colorWhite);
+    text-align: right;
+    font-family: var(--headingFont);
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.team_heading h2 span {
+    display: block;
+}
+
+.single_team {
+    background: url(../images/team_bg_shapes.svg);
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    padding: 30px 40px 40px 40px;
+    position: relative;
+    margin: 0px 12px;
+}
+
+.single_team::after {
+    position: absolute;
+    content: "";
+    width: 75px;
+    height: 2px;
+    background: var(--colorPrimary);
+    bottom: 53px;
+    right: -3px;
+    opacity: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transform: rotate(-54deg);
+    -webkit-transform: rotate(-54deg);
+    -moz-transform: rotate(-54deg);
+    -ms-transform: rotate(-54deg);
+    -o-transform: rotate(-54deg);
+}
+
+.single_team:hover::after {
+    opacity: 1;
+    bottom: 45px;
+    right: -10px;
+}
+
+.single_team .share {
+    color: var(--colorPrimary);
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: block;
+    width: 20px;
+    text-align: center;
+    opacity: 0;
+}
+
+.single_team:hover .share {
+    opacity: 1;
+}
+
+.single_team .img {
+    height: 233px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.single_team .text {
+    margin-top: 25px;
+}
+
+.single_team .text h3 {
+    color: var(--colorWhite);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 50px;
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+}
+
+.single_team .text h5 {
+    color: var(--colorPrimary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+.team_slider .nextArrow,
+.team_slider .prevArrow {
+    width: 45px;
+    height: 45px;
+    line-height: 45px !important;
+    text-align: center;
+    color: #FFDFCD;
+    border: 1px solid #ffdfcd75;
+    position: absolute;
+    top: 237px;
+    left: -120px;
+    z-index: 9;
+    cursor: pointer;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.team_slider .prevArrow {
+    left: -189px;
+}
+
+.team_slider .nextArrow::after,
+.team_slider .prevArrow::after {
+    position: absolute;
+    content: "";
+    width: 53px;
+    height: 53px;
+    border: 1px dashed #ffdfcd75;
+    top: -5px;
+    left: -5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+
+.team_slider .nextArrow,
+.team_slider .nextArrow:hover,
+.team_slider .prevArrow:hover {
+    color: var(--colorPrimary);
+    border-color: var(--colorPrimary);
+}
+
+.team_slider .nextArrow::after,
+.team_slider .nextArrow:hover::after,
+.team_slider .prevArrow:hover::after {
+    border-color: #ecfb5c8a;
+}
+
+/* team end */
+
+/* footer start */
+footer {}
+
+.footer_content {
+    padding-top: 70px;
+    padding-bottom: 45px;
+}
+
+.footer_content .footer_logo {
+    width: 165px;
+    margin: 0 auto;
+    display: block;
+}
+
+.footer_content p {
+    color: #A3A596;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.footer_content ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 45px;
+    justify-content: center;
+}
+
+.footer_content ul li {}
+
+.footer_content ul li a {
+    color: var(--colorWhite);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    padding: 0;
+    position: relative;
+}
+
+.footer_content ul li:hover a,
+.footer_content ul li a.active {
+    color: var(--colorPrimary);
+}
+
+.footer_content ul li a:hover {}
+
+.footer_content ul li a::after {
+    position: absolute;
+    content: "";
+    background: url(../images/menu_star_icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 15px;
+    top: 4px;
+    right: -20px;
+    opacity: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.footer_content ul li a:hover::after,
+.footer_content ul li a.active::after {
+    opacity: 1;
+}
+
+
+
+.footer_copyright {
+    background: #011412;
+    padding: 25px 0px;
+}
+
+.footer_copyright p {
+    color: #A3A596;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer_copyright p a {
+    color: var(--colorPrimary);
 }
 
 
@@ -604,4 +893,6 @@ button {
 
 
 
-/* video end */
+
+
+/* footer end */
