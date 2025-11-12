@@ -2,6 +2,22 @@ $(function () {
 
     "use strict";
 
+    // menu fix js
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            if ($('.main_menu').offset() != undefined) {
+                if (!$('.main_menu').hasClass("menu_fix")) {
+                    $('.main_menu').addClass("menu_fix");
+                }
+            }
+        }
+        else {
+            if ($('.main_menu').offset() != undefined) {
+                $('.main_menu').removeClass("menu_fix");
+            }
+        }
+    });
+
 
     // svg icon converter
     SVGInject(document.querySelectorAll("img.injectable"));
@@ -58,15 +74,6 @@ $(function () {
         ]
     });
 
-
-
-
-
-
-
-
-
-
-
-
+    // AOS js
+    AOS.init();
 });
