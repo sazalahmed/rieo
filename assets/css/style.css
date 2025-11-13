@@ -92,7 +92,7 @@ button {
 :root {
     --colorPrimary: #ECFB5C;
     --colorWhite: #FFFFFF;
-    --colorBlack: #2F3212;
+    --colorBlack: #011412;
     --paraFont: "Poppins", sans-serif;
     --headingFont: "Barlow", sans-serif;
 }
@@ -148,6 +148,7 @@ button {
     top: 15px;
     left: 0;
     padding: 10px 0px;
+    z-index: 99;
     transition: all linear .3s;
     -webkit-transition: all linear .3s;
     -moz-transition: all linear .3s;
@@ -159,7 +160,7 @@ button {
     position: fixed;
     top: 0;
     z-index: 99;
-    background: #00100f;
+    background: var(--colorBlack);
     border-bottom: 1px solid #eeeeee1f;
     animation: menu_animate linear 1s;
     -webkit-animation: menu_animate linear 1s;
@@ -201,6 +202,7 @@ button {
     text-transform: uppercase;
     padding: 0;
     position: relative;
+    display: inline-block;
 }
 
 .main_menu .navbar-nav .nav-item .nav-link::after {
@@ -367,12 +369,48 @@ button {
     left: 0%;
 }
 
+.navbar-toggler {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--colorPrimary);
+    color: var(--colorBlack);
+    padding: 0;
+    box-shadow: none !important;
+    border: none;
+    text-align: center;
+    border-radius: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.navbar-toggler.show {
+    background: red;
+    color: var(--colorWhite);
+}
+
+.navbar-toggler .close_icon_close {
+    display: none;
+}
+
+.navbar-toggler.show .close_icon_close {
+    display: inline-block;
+}
+
+.navbar-toggler.show .menu_icon_bar {
+    display: none;
+}
+
 /* main menu end */
+
 .cell_background {
     background: url(../images/banner_about_bg.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
 /* banner start */
@@ -642,9 +680,9 @@ button {
 /* video start */
 .video_bg {
     background: url(../images/video_bg_shapes.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
     padding: 25px;
 }
 
@@ -666,7 +704,7 @@ button {
 }
 
 .video_item .text h3 {
-    color: #00100F;
+    color: var(--colorBlack);
     font-size: 50px;
     font-style: normal;
     font-weight: 800;
@@ -688,7 +726,7 @@ button {
 }
 
 .video_item .text h6 {
-    color: #00100F;
+    color: var(--colorBlack);
     font-size: 22px;
     font-weight: 800;
     line-height: 55px;
@@ -1034,7 +1072,7 @@ button {
 }
 
 .footer_copyright {
-    background: #011412;
+    background: var(--colorBlack);
     padding: 25px 0px;
 }
 

@@ -39,7 +39,7 @@ $(function () {
     $('.team_slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         dots: false,
         arrows: true,
@@ -47,6 +47,12 @@ $(function () {
         prevArrow: '<i class="fa-solid fa-chevron-left prevArrow"></i>',
 
         responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
             {
                 breakpoint: 1200,
                 settings: {
@@ -76,4 +82,10 @@ $(function () {
 
     // AOS js
     AOS.init();
+
+    //small device menu toggler
+    $(".navbar-toggler").on("click", function () {
+        $(".navbar-toggler").toggleClass("show");
+    });
+
 });
